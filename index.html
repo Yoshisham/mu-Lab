@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS && TrackJS.install({ 
+      token: "2bdc06261080419488c027e73763016c"
+      // for more configuration options, see https://docs.trackjs.com
+    });
+  </script>
+                          
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>110 Lab 5</title>
+  <title>110 Make-up Lab</title>
   <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 
@@ -23,8 +31,8 @@
             <label for="volume-number" id="volume-text">Volume</label>
             <img id="volume-image" src="./assets/media/icons/volume-level-3.svg"
               alt="Max Volume">
-            <input id="volume-number" name="volume-number" type="number" min="0" max="100"
-              value="100">
+            <!--<input id="volume-number" name="volume-number" type="number" min="-100" max="100"
+              value="100">-->
             <input id="volume-slider" name="volume-slider" type="range" min="0" max="100"
               value="100">
           </div>
@@ -51,10 +59,23 @@
           <button id="honk-btn" type="submit">Honk</button>
         </div>
       </form>
+
+      <fieldset>
+        <button id="log" type="button">Test console.log()</button>
+        <button id="error" type="button">Test console.error()</button>
+        <button id="table" type="button">Test console.table()</button>
+        <button id="dir" type="button">Test console.dir()</button>
+        <button id="dirxml" type="button">Test console.dirxml()</button>
+        <button id="group" type="button">Test console.group()</button>
+        <button id="time" type="button">Test console.time()</button>
+        <button id="timeEnd" type="button">Test console.timeEnd()</button>
+        <button id="trace" type="button">Test console.trace()</button>
+      </fieldset>
     </main>
   </div>
 
   <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/console.js"></script>
 </body>
 
 </html>
